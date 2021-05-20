@@ -1,3 +1,6 @@
+const jsonfile = require('jsonfile')
+
+
 let a = [
     {
         "id": "600739b44fa71b69d3d65803",
@@ -3817,3 +3820,31 @@ let c = a.length
 let d = b.length
 let e = c + d
 console.log(e)
+
+let s = []
+
+
+async function aa(){
+    await a.map((f)=>{
+        let g = f.transactionsSummary.orderCount
+        if(g != 0){
+            s.push(f)
+        }
+    })
+    
+    await b.map((f)=>{
+        let g = f.transactionsSummary.orderCount
+        if(g != 0){
+            s.push(f)
+        }
+    })
+}
+
+aa().then(()=>{
+    const file = `./data.json`
+    jsonfile.writeFile(file, s)
+    .then(res => {
+        console.log('Write complete')
+    })
+    .catch(error => console.error(error))
+})

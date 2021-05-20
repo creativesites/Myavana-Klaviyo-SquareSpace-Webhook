@@ -18,9 +18,13 @@
   "homepage": "https://github.com/creativesites/Myavana-Klaviyo-SquareSpace-Webhook#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "axios-oauth-client": "^1.4.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "jsonfile": "^6.1.0",
     "node-fetch": "^2.6.1",
-    "node-klaviyo": "^1.1.1"
+    "node-klaviyo": "^1.1.1",
+    "node-schedule": "^2.0.0",
+    "sync-promise": "^1.1.0"
   }
 }
